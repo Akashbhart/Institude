@@ -70,7 +70,15 @@ class adminsiteController extends Controller
         $student->delete();
         return redirect()->route('view-student')->with('msg','Student Deleted successfully!');  
     }
-    public function update($id){
-        echo $id;die('update id');
+    public function update(Request $request,$id){
+        ///echo $id;die('update id');
+        $student_date=addstudent::findOrFail($id);
+        //echo $request;die('gh');
+        $student_date->update($request->only(['name','email_id','contact','course']));
+        return redirect()->route('students.edit',$id)->with('msg','Student updated successfully!');
+
+    }
+    public function add_course(){
+        return view('Admin.addcourse');
     }
 }

@@ -84,7 +84,7 @@
     <!-- Courses Module -->
     <a href="#" onclick="toggleMenu('coursesMenu')"><i class="fas fa-book"></i> Courses ▾</a>
     <div class="submenu" id="coursesMenu">
-        <a >Add Course</a>
+        <a href="{{ route('add-course') }}" >Add Course</a>
         <a >View Courses</a>
     </div>
 

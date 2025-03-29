@@ -25,7 +25,7 @@
          </div>
          <div class="mb-3">
              <label for="email" class="form-label">Email</label>
-             <input type="email" class="form-control" id="email" name="email" value="{{ $student->email_id }}" required>
+             <input type="email" class="form-control" id="email" name="email_id" value="{{ $student->email_id }}" required>
          </div>
          <div class="mb-3">
              <label for="contact" class="form-label">Contact</label>

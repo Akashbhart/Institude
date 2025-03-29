@@ -17,3 +17,5 @@ Route::get('Admin/Show Student',[adminsiteController::class,'view_student'])->na
 Route::get('/students/{id}/edit', [adminsiteController::class, 'edit'])->name('students.edit');
 Route::put('/students/{id}', [adminsiteController::class, 'update'])->name('students.update');
 Route::delete('/students/{id}', [adminsiteController::class, 'destroy'])->name('students.destroy');
+Route::get('Admin/Course',[adminsiteController::class,'add_course'])->name('add-course');
+Route::post('Admin/Add',[adminsiteController::class,'course_store'])->name('course-store');
